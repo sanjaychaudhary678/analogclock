@@ -1,0 +1,182 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    /*background: #282c34;*/
+    margin: 0;
+    /* background-color: pink; */
+    /*border: 5px solid #b7410e;*/
+    background-image: url('./patrick-tomasso-QMDap1TAu0g-unsplash.jpg');
+    background-size: cover;
+  }
+  
+  .logo-container {
+  position: absolute;
+  top: -5vh;
+  left: 3vw;
+  /* z-index: 20; */
+}
+
+.logo-container img {
+   width: 15vw;  /* responsive width */
+  max-width: 200px;
+  filter: drop-shadow(0 0 5px #0ff);
+}
+  
+.timezone-menu {
+  position: absolute;
+  top: 5vh;
+  right: 3vw;
+  z-index: 20;
+}
+
+.timezone-menu select {
+  font-size: 1.2vw;
+  width: 15vw;
+  max-width: 200px;
+  padding: 0.4em 0.6em;
+  background-color: #111827;
+  color: #0ff;
+  border: 1px solid #0ff;
+  border-radius: 5px;
+  text-shadow: 0 0 5px #0ff;
+}
+
+
+  .clock {
+   width: 45vmin;
+  height: 45vmin;
+  top: -7%;
+    /*border: 8px solid #fff;*/
+    border-radius: 50%;
+    position: relative;
+    background: #000;
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.3),   /* softer outer blue glow */
+  0 0 20px rgba(0, 191, 255, 0.4),   /* moderate outer blue glow */
+  0 0 30px rgba(0, 191, 255, 0.5),   /* more subtle blue glow */
+  inset 0 0 10px rgba(0, 191, 255, 0.3); /* inner blue glow */
+  }
+  
+  .numeral {
+    font-size: min(4vmin, 20px);
+    position: absolute;
+    color: #0ff;
+    font-family: 'Times New Roman', serif;
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+    left: 47%;
+    top: 47%;
+    transform: rotate(calc(30deg * var(--i)))
+               translateY(-19vmin)
+               rotate(calc(-30deg * var(--i)));
+    transform-origin: center;
+}
+
+
+  .hand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0% 50%;
+    transform: rotate(90deg);
+    transition: transform 0.05s ease-in-out;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+
+  .hour {
+      width: 25%;
+  height: 1.5%;
+    border-radius: 10px;
+     clip-path: polygon(0% 100%, 0% 0%, 100% 100%); 
+    background: #ff5050;
+     box-shadow: 0 0 15px 3px rgba(255, 80, 80, 0.8);
+      box-shadow: 0 0 15px 3px rgba(80, 191, 255, 0.8);
+  }
+
+  .minute {
+     width: 35%;
+  height: 1.2%;
+     border-radius: 10px;
+     clip-path: polygon(0% 100%, 0% 0%, 100% 100%); 
+/*     border-radius: 50%;*/
+/*clip-path: polygon(0% 100%, 50% 0%, 100% 100%);*/
+    background: #50bfff;
+  }
+
+  .second {
+    width: 45%;
+  height: 0.8%;
+    border-radius: 10px;
+     clip-path: polygon(0% 100%, 0% 0%, 100% 100%); 
+    background: #ffff50;
+    box-shadow: 0 0 15px 3px rgba(255, 255, 80, 0.8);
+  }
+
+  .center {
+   width: 3%;
+  height: 3%;
+    /*background: #fff;*/
+    background: #ffff50;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+  
+  .date-display {
+  position: relative;
+  right: -55%;
+  top: 50%;
+  transform: translateY(-50%);
+  
+  background-color: #111827;
+  color: #0ff;
+  font-size: 3vmin;
+  font-family: 'Courier New', monospace;
+  text-align: center;
+  line-height: 1.2;
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+
+  padding: 0.1em 0.3em;
+  border-radius: 8px;
+
+  display: inline-block;
+  white-space: nowrap;
+}
+
+@media (min-width: 768px )and(max-width: 1440px) {
+
+  .logo-container{
+      top: -8vh;
+    left: 4vw;
+  }
+
+}
+
+@media (min-width: 425px)and(max-width: 768px) {
+
+  .logo-container{
+      top: -12vh;
+  }
+
+  .timezone-menu {
+    top: 3vh;  
+}
+
+  
+}
+
+@media (min-width: 375)and(max-width: 425px) {
+  .logo-container {
+      left: 6vw;
+  }
+  .timezone-menu {
+        top: 2vh;
+ 
+}
+}
+
+
+

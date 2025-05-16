@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Analog Clock</title>
+  <link rel="stylesheet" href="./styles.css">
+  
+</head>
+<body>
+    <!-- <h1>Analog Clock</h1> -->
+<div class="header">
+
+<div class="logo-container">
+  <!-- Example SVG Logo -->
+  <img src="./logo.svg" height="200px" width="200px">
+</div>
+
+
+  <div class="timezone-menu">
+  <select id="timezoneSelect">
+    <option value="local">Local Time</option>
+    <option value="UTC">UTC</option>
+    <option value="America/New_York">New York (EST)</option>
+    <option value="Europe/London">London (GMT)</option>
+    <option value="Asia/Tokyo">Tokyo (JST)</option>
+    <option value="Asia/Kolkata">India (IST)</option>
+    <option value="Australia/Sydney">Sydney (AEST)</option>
+  </select>
+</div>
+
+</div>
+  
+  <div class="clock">
+  <div class="numeral" style="--i:1;">I</div>
+  <div class="numeral" style="--i:2;">II</div>
+  <div class="numeral" style="--i:3;">III</div>
+  <div class="numeral" style="--i:4;">IV</div>
+  <div class="numeral" style="--i:5;">V</div>
+  <div class="numeral" style="--i:6;">VI</div>
+  <div class="numeral" style="--i:7;">VII</div>
+  <div class="numeral" style="--i:8;">VIII</div>
+  <div class="numeral" style="--i:9;">IX</div>
+  <div class="numeral" style="--i:10;">X</div>
+  <div class="numeral" style="--i:11;">XI</div>
+  <div class="numeral" style="--i:12;">XII</div>
+  
+<!--  <div class="date-display">-->
+<!--  <div id="day"></div>-->
+<!--  <div id="month"></div>-->
+<!--</div>-->
+
+<div class="date-display" id="dateDisplay"></div>
+
+
+  <div class="hand hour" id="hour"></div>
+  <div class="hand minute" id="minute"></div>
+  <div class="hand second" id="second"></div>
+  <div class="center"></div>
+  
+  
+
+</div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
